@@ -29,14 +29,7 @@ int main()
 {
 	int s, t, a, b, m, n;
 	cin >> s >> t >> a >> b >> m >> n;
-	vector<int> apples(m);
-	while (m >0)
-		cin >> apples[--m];
-	vector<int> oranges(n);
-	while (n >0)
-		cin >> oranges[--n];
-    
-	countApplesAndOranges(s, t, a, b, apples, oranges);
+	countApplesAndOranges(s, t, a, b, parse<int>(cin, m), parse<int>(cin, n));
 
     	return 0;
 }

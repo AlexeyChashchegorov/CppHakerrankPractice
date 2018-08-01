@@ -1,7 +1,7 @@
 BINARIES=AppleAndOrange BreakingTheRecords
 
 CCX=c++
-CCX_FLAGS=-std=c++1y -I../include
+CCX_FLAGS=-std=c++1y -I../../lib/include
 
 all: $(BINARIES)
 

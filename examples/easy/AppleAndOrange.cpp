@@ -2,12 +2,7 @@
 	Statements:https://www.hackerrank.com/challenges/apple-and-orange/problem
 */
 
-
-#include <iostream>
-#include <list>
-#include <vector>
-
-using namespace std;
+#include <common.h>
 
 list<int> absPoints(const vector<int>& v, int p)
 {

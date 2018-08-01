@@ -1,5 +1,15 @@
+BINARIES=AppleAndOrange BreakingTheRecords
+
+CCX=c++
+CCX_FLAGS=-std=c++1y -I../include
+
+all: $(BINARIES)
+
 AppleAndOrange: AppleAndOrange.cpp
-	c++ -std=c++1y AppleAndOrange.cpp -I ../include/ -o AppleAndOrange
+	${CCX} ${CCX_FLAGS} AppleAndOrange.cpp -o AppleAndOrange
+
+BreakingTheRecords: BreakingTheRecords.cpp
+	${CCX} ${CCX_FLAGS} BreakingTheRecords.cpp -o BreakingTheRecords
 
 clean:
-	rm AppleAndOrange
+	rm AppleAndOrange BreakingTheRecords

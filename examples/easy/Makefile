@@ -1,9 +1,4 @@
-SOURCES=\
-	AppleAndOrange.cpp \
-	BreakingTheRecords.cpp \
-	BirthdayChocolate.cpp \
-	DivisibleSumPairs.cpp
-
+SOURCES=${wildcard *.cpp}
 BINARIES=$(SOURCES:%.cpp=%)
 
 CCX=c++
@@ -14,8 +9,8 @@ all: $(BINARIES)
 $(BINARIES): 
 	${CCX} ${CCX_FLAGS} $@.cpp -o $@
 
-check: $(BINARIES)
-	make -C check
+check:
+	$(MAKE) -C check
 
 clean:
 	rm $(BINARIES)

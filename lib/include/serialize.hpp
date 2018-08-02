@@ -23,7 +23,7 @@ std::ostream& operator<<(std::ostream& os, const std::vector<Value>& v)
 }
 
 template <class Value>
-std::vector<Value> parse(std::istream& is, unsigned long count=0)
+std::vector<Value> parseVector(std::istream& is, unsigned long count=0)
 {
 	std::vector<Value> ret={};
 	if (count == 0)
@@ -35,4 +35,12 @@ std::vector<Value> parse(std::istream& is, unsigned long count=0)
 			is >> ret[i];	
 	}
 	return ret;
+}
+
+template <class Value>
+Value parse(std::istream& is)
+{
+	Value v;
+	is >> v;
+	return v;	
 }

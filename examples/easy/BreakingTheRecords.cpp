@@ -23,7 +23,7 @@ vector<int> breakingRecords(vector<int> scores)
 
 int main()
 {
-    	for (auto r: breakingRecords(parse<int>(cin)))
+    	for (auto r: breakingRecords(parseVector<int>(cin)))
         	cout << r << " ";
 	cout << endl;
 	return 0;

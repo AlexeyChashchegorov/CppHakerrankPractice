@@ -29,7 +29,7 @@ int main()
 {
 	int s, t, a, b, m, n;
 	cin >> s >> t >> a >> b >> m >> n;
-	countApplesAndOranges(s, t, a, b, parse<int>(cin, m), parse<int>(cin, n));
+	countApplesAndOranges(s, t, a, b, parseVector<int>(cin, m), parseVector<int>(cin, n));
 
     	return 0;
 }

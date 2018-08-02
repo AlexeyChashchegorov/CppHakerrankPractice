@@ -1,4 +1,8 @@
-TESTS=AppleAndOrange BreakingTheRecords BirthdayChocolate
+TESTS=\
+	AppleAndOrange \
+	BreakingTheRecords \
+	BirthdayChocolate \
+	DivisibleSumPairs
 
 define test_for
 	cat $(1).input | ../$(1) > $(1).output
@@ -16,3 +20,6 @@ BreakingTheRecords:
 
 BirthdayChocolate:
 	$(call test_for,BirthdayChocolate)
+
+DivisibleSumPairs:
+	$(call test_for,DivisibleSumPairs)

@@ -1,4 +1,4 @@
-BINARIES=AppleAndOrange BreakingTheRecords BirthdayChocolate
+BINARIES=AppleAndOrange BreakingTheRecords BirthdayChocolate DivisibleSumPairs
 
 CCX=c++
 CCX_FLAGS=-std=c++1y -I../../lib/include
@@ -13,6 +13,9 @@ BreakingTheRecords: BreakingTheRecords.cpp
 
 BirthdayChocolate: BirthdayChocolate.cpp
 	${CCX} ${CCX_FLAGS} BirthdayChocolate.cpp -o BirthdayChocolate
+
+DivisibleSumPairs: DivisibleSumPairs.cpp
+	${CCX} ${CCX_FLAGS} DivisibleSumPairs.cpp -o DivisibleSumPairs
 
 clean:
 	rm $(BINARIES)

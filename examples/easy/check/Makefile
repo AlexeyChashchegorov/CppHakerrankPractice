@@ -1,25 +1,13 @@
-TESTS=\
-	AppleAndOrange \
-	BreakingTheRecords \
-	BirthdayChocolate \
-	DivisibleSumPairs
+SOURCES=${wildcard ../*.cpp}
 
-define test_for
-	cat $(1).input | ../$(1) > $(1).output
-	diff $(1).output $(1).expected
-	rm $(1).output
-endef
+
+TMP=$(SOURCES:%.cpp=%)
+TESTS=$(TMP:../%=%)
 
 all: $(TESTS)
 
-AppleAndOrange:
-	$(call test_for,AppleAndOrange)
+$(TESTS): 
+	cat $@.input | ../$@ > $@.output; diff $@.output $@.expected; rm $@.output
 
-BreakingTheRecords:
-	$(call test_for,BreakingTheRecords)
-
-BirthdayChocolate:
-	$(call test_for,BirthdayChocolate)
-
-DivisibleSumPairs:
-	$(call test_for,DivisibleSumPairs)
+clean:
+	echo $(TESTS)

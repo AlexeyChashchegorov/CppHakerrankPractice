@@ -1,6 +1,5 @@
 SOURCES=${wildcard ../*.cpp}
 
-
 TMP=$(SOURCES:%.cpp=%)
 TESTS=$(TMP:../%=%)
 

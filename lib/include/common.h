@@ -5,6 +5,7 @@
 #include <list>
 #include <iostream>
 #include <unordered_map>
+#include <sstream>
 
 #include "serialize.hpp"
 #include "spector.hpp"

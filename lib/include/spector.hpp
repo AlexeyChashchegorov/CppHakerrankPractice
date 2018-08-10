@@ -17,3 +17,13 @@ SpectorContainer spector(const Container& container)
 		ret[value]++;
 	return ret;
 }
+
+template <class Container, class SpectorContainer>
+SpectorContainer spector_positions(const Container& container)
+{
+	SpectorContainer ret;
+	unsigned long pos = 0;
+	for(const auto& value: container)
+		ret[value].insert(pos++);
+	return ret;
+}

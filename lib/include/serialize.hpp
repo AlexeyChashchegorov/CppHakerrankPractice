@@ -3,6 +3,13 @@
 #include <iostream>
 #include <vector>
 
+template<class T, class K>
+std::istream& operator>>(std::istream& is, std::pair<T,K>& v)
+{
+	is >> v.first >> v.second;
+	return is;
+}
+
 template <class Value>
 std::istream& operator>>(std::istream& is, std::vector<Value>& v)
 {
